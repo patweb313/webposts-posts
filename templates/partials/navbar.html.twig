@@ -23,10 +23,7 @@
                             <summary>Catégories</summary>
                             <ul class="p-2 mt-5 bg-base-100 w-40 z-1 bg-primary text-white">
                                 <li><a href="{{ path('app_posts') }}">Toutes</a></li>
-                                <li><a href="">Frameworks</a></li>
-                                <li><a href="">Security</a></li>
-                                <li><a href="">Network</a></li>
-                                <li><a href="">Coding</a></li>
+                                {{ render(controller('App\\Controller\\CategoryController::categories')) }}
                             </ul>
                         </details>
                     </li>
