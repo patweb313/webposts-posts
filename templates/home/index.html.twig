@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent() }} - Home{% endblock %}
+{% block title %}{{ parent() }}Home{% endblock %}
 
 {% block body %}
     {# Hero #}
@@ -39,13 +39,10 @@
 
                    {# Image #}
                    <div class="relative">
-
                        {# Décoration #}
                        <div class="absolute -inset-4 rounded-3xl bg-primary/10 blur-2xl lg:w-[90%]"
                            aria-hidden="true">
-
                        </div>
-
                        <div class="relative overflow-hidden rounded-2xl shadow-2xl">
                            <img
                                src="{{ asset('images/hero01.jpg') }}"

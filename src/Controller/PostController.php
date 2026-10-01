@@ -34,4 +34,14 @@ final class PostController extends AbstractController
             'post' => $post,
         ]);
     }
+
+    // Affiche les posts en fonction des catégories
+    #[Route('/posts/{slug}', name: 'app_posts_category')]
+    public function postsCat(PostRepository $repository, string $slug): Response
+    {
+        $posts = $repository->findByCategory($slug);
+        return $this->render('post/posts.html.twig', [
+            'posts' => $posts,
+        ]);
+    }
 }
